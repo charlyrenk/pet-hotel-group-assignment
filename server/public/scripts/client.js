@@ -18,5 +18,16 @@ app.controller('PetController', ['$http', function ($http) {
             self.pets = response.data;
         }); //end of $http
     }; //end of getPets
+
+    self.updatePets = function (id) {
+        console.log(id);
+        $http({
+            method: 'PUT',
+            url: '/pets/' + id,
+            data: self.newPet
+        }).then(function (response){
+            self.getPets();
+        })
+    }
     self.getPets();
 }]); //end of controller
