@@ -9,6 +9,7 @@ app.controller('PetController', ['$http', function ($http) {
     self.pets = [];
 
     self.getPets = function () {
+        console.log('get the pets');
         $http({
             method: 'GET',
             url: '/pets',

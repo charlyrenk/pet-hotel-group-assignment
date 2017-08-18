@@ -45,7 +45,7 @@
         <th>Check in/out</th>
       </tr>
       <tr ng-repeat= "thing in vm.pets"> 
-          <td>{{thing.pet_name}}</td>
+          <td>{{thing.first_name}} {{thing.last_name}}</td><td>{{thing.pet_name}}</td><td>{{thing.breed}}</td><td>{{thing.color}}</td><td><button class="updateButton">Update</button></td><td><button class="delete">Delete</button></td><td><button class="checkInOut">Check In/Out</button></td>
       </tr>
     </thead>
   </table>
