@@ -12,9 +12,10 @@ CREATE TABLE pets(
 	owner_id integer REFERENCES owners
 	);
 
-SELECT * FROM visits;
-	SELECT * FROM pets;
-	SELECT * FROM owners;
+CREATE TABLE visits(
+	checkin_date TIMESTAMP NOT NULL,
+	checkout_date TIMESTAMP,
+	pet_id INT REFERENCES pets);
 	
 INSERT INTO owners(first_name, last_name)
 VALUES ('Kevin', 'McMahon'),
