@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body ng-app="PetApp" ng-controller="PetController as vm">
   <!--Owner Registration Section by Ami  -->
   <h2>Owner Registration</h2>
   <label for="firstNameInput"> First Name:</label>
@@ -44,7 +44,8 @@
         <th>Delete</th>
         <th>Check in/out</th>
       </tr>
-      <tr>
+      <tr ng-repeat= "thing in vm.pets"> 
+          <td>{{thing.pet_name}}</td>
       </tr>
     </thead>
   </table>
